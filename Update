@@ -1,4 +1,6 @@
 #!/bin/bash
+# Author:       Luiz Eduardo (Duduh)
+# Author URL:   https://github.com/Luiz-Eduardo-BL
 
 echo "Script de Atualização do Sistema"
 echo "Atualizando Pacman.../n"
