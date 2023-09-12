@@ -1,0 +1,36 @@
+#!/bin/bash
+
+echo "Script de Atualização do Sistema"
+echo "Atualizando Pacman.../n"
+pacman -Syyuu
+
+echo "Atualização Flatpak.../n"
+flatpak update
+
+echo "Deseja Limpar o Cache e Pacotes do Pacman? [S/N]"
+
+  read resposta
+
+  if [ "$resposta" == "S" ] || [ "$resposta" == "s" ]; then 
+    echo "Limpando Pacotes Pacman"
+    sudo pacman -Rs $(pacman -Qtdq)
+
+    echo "Limpando Pacotes Flatpak"
+    flatpak remove --unused
+
+    echo "Tamanho do Cache do Pacman..."
+    du -h /var/cache/pacman/pkg
+
+    echo "Deseja Remover? [S/N]"
+    read resposta_remocao
+
+      if [ "$resposta_remocao" == "S" ] || [ "$resposta_remocao" == "s" ]; then 
+        echo "Removendo Cache do Pacman"
+        sudo pacman -Sc
+      else
+        echo "Cache do Pacman não Removido"
+      fi
+
+  fi
+
+echo "Atualizações Concluídas"
