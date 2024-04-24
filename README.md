@@ -32,6 +32,36 @@ Execute o script usando o seguinte comando:
 
 O script irá guiá-lo durante o processo de atualização e limpeza, fornecendo opções ao longo do caminho.
 
+## Adicionando comando personalizado
+
+1. Edição do Arquivo .zshrc
+Abra o arquivo `.zshrc` utilizando um editor de texto de sua preferência, como o Nano:
+```bash
+nano ~/.zshrc
+```
+2. Adição do Alias Correto
+Dentro do arquivo, insira a seguinte linha para criar um alias chamado `update`:
+```bash
+alias update='/caminho/Update.sh'
+```
+Este alias permitirá que você execute o script diretamente.
+3. Tornar o Script Executável
+Conceda permissão de execução ao script com o comando:
+```bash
+chmod +x /caminho/Update.sh
+```
+4. Atualização do Terminal
+Para que as alterações tenham efeito, atualize o terminal com o comando:
+```bash
+source ~/.zshrc
+```
+Ou, se preferir, reinicie o terminal.
+
+Após esses passos, ao digitar `update` no terminal, o script `Update.sh` será executado. Lembre-se de que o uso de `sudo` no alias só é necessário se o script exigir permissões de superusuário para realizar determinadas operações. Caso contrário, inclua `sudo` dentro do próprio script ou modifique o alias para:
+```bash
+alias update='sudo /caminho/Update.sh'
+```
+
 ## Detalhes do Script
 
 O script é composto por várias etapas que são executadas sequencialmente:
