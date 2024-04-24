@@ -6,7 +6,7 @@
 
 </div>
 
-Este repositório contém um script Bash projetado para automatizar o processo de atualização de um sistema Linux baseado em Arch (como o Arch Linux). O script também oferece a opção de limpar o cache e os pacotes do gerenciador de pacotes Pacman, bem como os pacotes Flatpak.
+Este repositório contém um script projetado para automatizar o processo de atualização de um sistema Linux baseado em Arch (como o Arch Linux). O script também oferece a opção de limpar o cache e os pacotes do gerenciador de pacotes Pacman, bem como os pacotes Flatpak.
 
 ## Objetivo
 
