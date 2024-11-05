@@ -38,15 +38,4 @@ echo "Deseja Limpar o Cache e Pacotes do Pacman? [S/N]"
 
   fi
 
-# Deseja instalar algum app?
-echo "Deseja instalar algum app? [S/N]"
-
-  read resposta_app
-
-  if [ "$resposta_app" == "S" ] || ["$resposta_app" == "s" ]; then
-    echo "Digite o nome do app que deseja instalar"
-    read app
-    yay -S $app
-  fi
-
 echo "Atualizações Concluídas"
