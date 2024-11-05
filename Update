@@ -6,6 +6,9 @@ echo "Script de Atualização do Sistema"
 echo "Atualizando Pacman.../n"
 pacman -Syyuu
 
+echo "Atualizando AUR.../n"
+yay -Syu
+
 echo "Atualização Flatpak.../n"
 flatpak update
 
